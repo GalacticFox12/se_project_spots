@@ -1,0 +1,15 @@
+.header {
+  background-color: #fff;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.header__logo {
+  width: 94px;
+  height: 26px;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: 3.2px;
+}

@@ -30,3 +30,5 @@ This project is made so all the elements are displayed correctly on popular scre
 ![Small device view](./images/Small-device-view.png-view.png)
 
 **Web Link**
+
+https://galacticfox12.github.io/se_project_spots/

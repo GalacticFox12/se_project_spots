@@ -45,48 +45,63 @@
 }
 
 .profile__edit-btn {
+  display: flex;
+  gap: 8px;
+  justify-content: flex-start;
   margin-top: auto;
-  text-align: left;
   background-color: transparent;
-  color: rgba(33, 33, 33, 0.7);
   border: none;
+  opacity: 0.7;
   padding: 0;
-}
-
-.profile__edit-btn_icon {
-  color: #212121;
-  opacity: 70%;
-  margin-right: 8px;
-}
-
-.profile__edit-btn_text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  transition: opacity 0.2s ease-in;
+}
+
+.profile__edit-btn::before {
+  content: "";
+  background-image: url(../images/pencil.svg);
+  width: 16px;
+  height: 16px;
+}
+
+.profile__edit-btn:hover {
+  opacity: 1;
+  cursor: pointer;
 }
 
 .profile__add-btn {
+  display: flex;
+  gap: 8px;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   margin-left: auto;
   margin-top: auto;
   width: 149px;
   height: 52px;
   border-radius: 8px;
-  color: #fff;
+  color: rgba(252, 245, 229, 1);
   background-color: #212121;
   border: none;
-}
-
-.profile__add-btn_icon {
-  height: 12px;
-  width: 12px;
-  margin-right: 8px;
-}
-
-.profile__add-btn_text {
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
+  transition: opacity 0.2s ease-in;
+}
+
+.profile__add-btn:hover {
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.profile__add-btn::before {
+  content: "";
+  height: 12px;
+  width: 12px;
+  background-image: url(../images/plus-sign.svg);
+  background-position: center;
 }
 
 @media screen and (max-width: 627px) {

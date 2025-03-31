@@ -32,8 +32,8 @@ This project is made so all the elements are displayed correctly on popular scre
 
 **Web Link**
 
-https://galacticfox12.github.io/se_project_spots/
+[Spots Webpage](https://galacticfox12.github.io/se_project_spots/)
 
 **Video Share**
 
-https://drive.google.com/file/d/1U4UUw-YdR381mgjv9IuYC8lhLw8EGnyP/view?usp=sharing
+[Spots Video](https://drive.google.com/file/d/1U4UUw-YdR381mgjv9IuYC8lhLw8EGnyP/view?usp=sharing)

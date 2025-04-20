@@ -57,7 +57,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
-  transition: opacity 0.2s ease-in;
+  transition: opacity 0.15s ease-in;
 }
 
 .profile__edit-btn::before {
@@ -89,7 +89,7 @@
   font-weight: 500;
   font-size: 16px;
   line-height: 1;
-  transition: opacity 0.2s ease-in;
+  transition: opacity 0.15s ease-in;
 }
 
 .profile__add-btn:hover {

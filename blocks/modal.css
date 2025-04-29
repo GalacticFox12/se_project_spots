@@ -27,6 +27,7 @@
   border-radius: 8px;
   background-color: #fff;
   position: relative;
+  box-sizing: border-box;
 }
 
 .modal__close-btn {

@@ -1,5 +1,6 @@
 .card {
   width: 413px;
+  position: relative;
 }
 
 .card__image {
@@ -9,6 +10,27 @@
   display: block;
   margin-bottom: 12px;
   border-radius: 8px;
+}
+
+.card__delete-btn {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-image: url(../images/delete-default.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  border: none;
+  background-color: transparent;
+  padding: 0;
+  transition: opacity 0.15s ease-in;
+}
+
+.card__delete-btn:hover {
+  background-image: url(../images/delete-hover.svg);
+  cursor: pointer;
+  opacity: 1;
 }
 
 .card__like-btn {

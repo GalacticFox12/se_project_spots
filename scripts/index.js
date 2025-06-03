@@ -93,7 +93,6 @@ function handleProfileFormSubmit(evt) {
   profileNameEl.textContent = editProfileNameInput.value;
   profileDescriptionEl.textContent = editProfileDescriptionInput.value;
   toggleModal(editProfileModal, false);
-  reset();
 }
 
 editProfileForm.addEventListener("submit", handleProfileFormSubmit);
@@ -108,6 +107,7 @@ function handleAddCardSubmit(evt) {
   const cardElement = getCardElement(inputValues);
   cardsList.prepend(cardElement);
   toggleModal(newPostModal, false);
+  newPostForm.reset();
 }
 
 newPostForm.addEventListener("submit", handleAddCardSubmit);

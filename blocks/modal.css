@@ -112,6 +112,14 @@
   color: #2121214d;
 }
 
+.modal__error {
+  display: block;
+  color: #ff0000b2;
+  font-size: 16px;
+  font-weight: 500;
+  margin-top: 8px;
+}
+
 .modal__submit-btn {
   max-width: 156px;
   width: 100%;

@@ -112,6 +112,10 @@
   color: #2121214d;
 }
 
+.modal__input_type_error {
+  border: 1px solid #ff000099;
+}
+
 .modal__error {
   display: block;
   color: #ff0000b2;
@@ -137,6 +141,11 @@
 .modal__submit-btn:hover {
   opacity: 80%;
   cursor: pointer;
+}
+
+.modal__submit-btn_inactive {
+  background-color: #212121;
+  opacity: 50%;
 }
 
 .modal__image-container {

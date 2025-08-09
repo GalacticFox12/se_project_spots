@@ -1,9 +1,9 @@
-import { enableValidation } from "./validation.js";
-import { settings } from "./validation.js";
-import { initialCards } from "./cards.js";
-import { toggleButtonState } from "./validation.js";
-import { resetValidation } from "./validation.js";
-import { disableBtn } from "./validation.js";
+import { enableValidation } from "../scripts/validation.js";
+import { settings } from "../scripts/validation.js";
+import { initialCards } from "../scripts/cards.js";
+import { toggleButtonState } from "../scripts/validation.js";
+import { resetValidation } from "../scripts/validation.js";
+import { disableBtn } from "../scripts/validation.js";
 
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");

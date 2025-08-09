@@ -1,3 +1,10 @@
+import { enableValidation } from "./validation.js";
+import { settings } from "./validation.js";
+import { initialCards } from "./cards.js";
+import { toggleButtonState } from "./validation.js";
+import { resetValidation } from "./validation.js";
+import { disableBtn } from "./validation.js";
+
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
 const editProfileCloseBtn = editProfileModal.querySelector(".modal__close-btn");
@@ -155,3 +162,5 @@ initialCards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.prepend(cardElement);
 });
+
+enableValidation(settings);

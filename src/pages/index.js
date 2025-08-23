@@ -1,4 +1,6 @@
-import { enableValidation, settings, resetValidation, toggleButtonState } from "./validation.js";
+import "./index.css";
+import { enableValidation, settings, resetValidation, toggleButtonState, disableBtn } from "../scripts/validation.js";
+import { initialCards } from "../scripts/cards.js";
 
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");

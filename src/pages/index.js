@@ -70,18 +70,10 @@ function getCardElement(data) {
 
 function openModal(modal) {
   modal.classList.add("modal_is-opened");
-  document.addEventListener("keydown", handleEscape);
 }
 
 function closeModal(modal) {
   modal.classList.remove("modal_is-opened");
-  document.removeEventListener("keydown", handleEscape);
-}
-
-function handleEscape(event) {
-  if (event.key === "Escape") {
-    closeModal(document.querySelector(".modal_is-opened"));
-  }
 }
 
 editProfileBtn.addEventListener("click", function () {
@@ -90,11 +82,6 @@ editProfileBtn.addEventListener("click", function () {
   resetValidation(
     editProfileForm,
     [editProfileNameInput, editProfileDescriptionInput],
-    settings
-  );
-  toggleButtonState(
-    [editProfileNameInput, editProfileDescriptionInput],
-    editProfileSubmitBtn,
     settings
   );
   openModal(editProfileModal);
@@ -112,24 +99,7 @@ newPostCloseBtn.addEventListener("click", function () {
   closeModal(newPostModal);
 });
 
-newPostModal.addEventListener("click", function (evt) {
-  if (evt.target === evt.currentTarget) {
-    closeModal(newPostModal);
-  }
-});
-editProfileModal.addEventListener("click", function (evt) {
-  if (evt.target === evt.currentTarget) {
-    closeModal(editProfileModal);
-  }
-});
-
-previewModal.addEventListener("click", function (evt) {
-  if (evt.target === evt.currentTarget) {
-    closeModal(previewModal);
-  }
-});
-
-previewModalCloseBtn.addEventListener("click", function () {
+previewModal.addEventListener("click", function () {
   closeModal(previewModal);
 });
 

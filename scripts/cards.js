@@ -1,4 +1,4 @@
-export const initialCards = [
+const initialCards = [
   {
     name: "Golden Gate bridge",
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/software-engineer/spots/7-photo-by-griffin-wooldridge-from-pexels.jpg",

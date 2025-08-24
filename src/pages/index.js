@@ -1,7 +1,7 @@
 import "./index.css";
 import { enableValidation, settings, resetValidation, toggleButtonState, disableBtn } from "../scripts/validation.js";
 import { initialCards } from "../scripts/cards.js";
-import Api from "../scripts/Api.js";
+import Api from "../utils/Api.js";
 
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
@@ -46,11 +46,12 @@ const api = new Api({
 });
 
 api.getInitialCards().then((cards) => {
-  console.log(cards);
   cards.forEach(function (item) {
   const cardElement = getCardElement(item);
   cardsList.prepend(cardElement);
-});
+})
+}).catch((err) => {
+    console.error(err);
 });
 
 function getCardElement(data) {

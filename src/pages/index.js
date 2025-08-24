@@ -1,6 +1,7 @@
 import "./index.css";
 import { enableValidation, settings, resetValidation, toggleButtonState, disableBtn } from "../scripts/validation.js";
 import { initialCards } from "../scripts/cards.js";
+import Api from "../scripts/Api.js";
 
 const editProfileBtn = document.querySelector(".profile__edit-btn");
 const editProfileModal = document.querySelector("#edit-profile-modal");
@@ -35,6 +36,22 @@ const cardTemplate = document
   .querySelector("#card-template")
   .content.querySelector(".card");
 const cardsList = document.querySelector(".cards__list");
+
+const api = new Api({
+  baseUrl: "https://around-api.en.tripleten-services.com/v1",
+  headers: {
+    authorization: "8606b4ad-2d31-4218-96cb-6012d27d651f",
+    "Content-Type": "application/json"
+  }
+});
+
+api.getInitialCards().then((cards) => {
+  console.log(cards);
+  cards.forEach(function (item) {
+  const cardElement = getCardElement(item);
+  cardsList.prepend(cardElement);
+});
+});
 
 function getCardElement(data) {
   const cardElement = cardTemplate.cloneNode(true);
@@ -154,11 +171,6 @@ function handleAddCardSubmit(evt) {
 }
 
 newPostForm.addEventListener("submit", handleAddCardSubmit);
-
-initialCards.forEach(function (item) {
-  const cardElement = getCardElement(item);
-  cardsList.prepend(cardElement);
-});
 
 enableValidation(settings);
 

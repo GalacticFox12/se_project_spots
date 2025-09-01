@@ -149,6 +149,11 @@
     padding-top: 20px;
   }
 
+  .profile__avatar-container {
+    width: 80px;
+    height: 80px;
+  }
+
   .profile__avatar {
     margin-right: 0;
     height: 80px;
@@ -164,6 +169,7 @@
     left: 52px;
     align-items: center;
     justify-content: center;
+    background-color: #21212199;
   }
 
   .profile__avatar-btn::after {

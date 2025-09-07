@@ -95,7 +95,7 @@
 .modal__btn-container_delete {
   display: flex;
   justify-content: center;
-  gap: 20px
+  gap: 20px;
 }
 
 .modal__label {
@@ -166,33 +166,38 @@
 }
 
 .modal__submit-btn_delete {
-  background-color: #FF6565;
+  background-color: #ff6565;
   width: 156px;
   height: 52px;
   border-radius: 8px;
   border: none;
   font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  padding: 0;
 }
 
 .modal__submit-btn_delete:hover {
-  background-color: #FF3333;
-  cursor: pointer;
+  background-color: #ff3333;
 }
 
 .modal__submit-btn_cancel {
   background-color: transparent;
+  color: #000;
   width: 156px;
   height: 52px;
   border-radius: 8px;
   border-color: #212121;
   border: 1px solid;
   font-weight: 500;
+  line-height: 1;
+  text-align: center;
+  padding: 0;
 }
 
 .modal__submit-btn_cancel:hover {
   background-color: #212121;
   color: #fff;
-  cursor: pointer;
 }
 
 .modal__image-container {
@@ -225,6 +230,12 @@
     padding: 12px 12px;
   }
 
+  .modal__btn-container_delete {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+
   .modal__close-btn {
     top: 12px;
     right: 12px;
@@ -252,6 +263,16 @@
   .modal__submit-btn {
     width: 100%;
     max-width: none;
+  }
+
+  .modal__submit-btn_delete {
+    width: 156px;
+    height: 52px;
+  }
+
+  .modal__submit-btn_cancel {
+    width: 156px;
+    height: 52px;
   }
 
   .modal__image {

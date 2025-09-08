@@ -89,14 +89,14 @@ function getCardElement(data) {
   cardTitleEl.textContent = data.name;
 
   const cardLikeBtnEl = cardElement.querySelector(".card__like-btn");
-  cardLikeBtnEl.addEventListener("click", () => {
-    cardLikeBtnEl.classList.toggle("card__like-btn_active");
-  });
+  if(data.isLiked === true) {cardLikeBtnEl.classList.add("card__like-btn_active")};
+  cardLikeBtnEl.addEventListener("click", (evt) => handleLike(evt, data._id));
 
   const cardDeleteBtnEl = cardElement.querySelector(".card__delete-btn");
-  cardDeleteBtnEl.addEventListener("click", (evt) =>
+  cardDeleteBtnEl.addEventListener("click", () =>
     handleDeleteCard(cardElement, data._id)
   );
+
 
   cardImageEl.addEventListener("click", () => {
     previewImageEl.src = data.link;
@@ -139,6 +139,16 @@ function handleDeleteCard(cardElement, cardId) {
   selectedCard = cardElement;
   selectedCardId = cardId;
   openModal(deleteModal);
+}
+
+function handleLike(evt, id) {
+  const isLiked = evt.target.classList.contains("card__like-btn_active");
+  api
+  .changeLikeStatus(id, isLiked)
+  .then((res) => {
+    evt.target.classList.toggle("card__like-btn_active", res.status);
+  })
+  .catch(console.error);
 }
 
 editProfileBtn.addEventListener("click", function () {

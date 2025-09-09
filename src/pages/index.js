@@ -48,7 +48,9 @@ const previewCaptionEl = previewModal.querySelector(".modal__caption");
 
 const deleteModal = document.querySelector("#delete-modal");
 const deleteModalBtn = deleteModal.querySelector(".modal__close-btn");
-const deleteModalCancelBtn = deleteModal.querySelector(".modal__submit-btn_cancel")
+const deleteModalCancelBtn = deleteModal.querySelector(
+  ".modal__submit-btn_cancel"
+);
 const deleteForm = deleteModal.querySelector(".modal__form");
 
 let selectedCard, selectedCardId;
@@ -229,7 +231,7 @@ deleteModalBtn.addEventListener("click", function () {
 
 deleteModalCancelBtn.addEventListener("click", function () {
   closeModal(deleteModal);
-})
+});
 
 deleteModal.addEventListener("click", function (evt) {
   if (evt.target === evt.currentTarget) {
@@ -247,6 +249,7 @@ function handleAvatarSubmit(evt) {
     .editAvatarInfo(avatarInput.value)
     .then((data) => {
       profileAvatar.src = data.avatar;
+      disableBtn(submitBtn);
       closeModal(avatarModal);
       avatarForm.reset();
     })

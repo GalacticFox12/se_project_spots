@@ -38,7 +38,6 @@ const avatarModalBtn = document.querySelector(".profile__avatar-btn");
 const avatarModal = document.querySelector("#edit-avatar-modal");
 const avatarModalCloseBtn = avatarModal.querySelector(".modal__close-btn");
 const avatarInput = avatarModal.querySelector("#profile-avatar-input");
-const avatarSubmitBtn = avatarModal.querySelector(".modal__submit-btn");
 const avatarForm = avatarModal.querySelector(".modal__form");
 
 const previewModal = document.querySelector("#preview-modal");

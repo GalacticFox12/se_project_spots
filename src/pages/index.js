@@ -248,7 +248,7 @@ function handleAvatarSubmit(evt) {
     .editAvatarInfo(avatarInput.value)
     .then((data) => {
       profileAvatar.src = data.avatar;
-      disableBtn(submitBtn);
+      disableBtn(submitBtn, settings);
       closeModal(avatarModal);
       avatarForm.reset();
     })
